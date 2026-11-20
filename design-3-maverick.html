@@ -151,6 +151,12 @@
   .hero-card p.lead{font-size:clamp(1rem,2.1vw,1.18rem);font-weight:500;color:var(--ink);margin-bottom:1.3rem}
   .hero-card .fineprint{font-size:.82rem;color:#6b6980;margin-top:.9rem;font-weight:400}
 
+  /* hero text hierarchy: real H1 largest, slogan demoted to support */
+  .hero-kicker{display:inline-block;font-weight:700;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow);margin-bottom:1rem}
+  .hero-h1{color:#fff;font-size:clamp(2rem,5.2vw,3.5rem);line-height:1.05;max-width:17ch;margin-bottom:1rem;text-wrap:balance}
+  .hero-h1 .hl-y{padding:.02em .22em}
+  .hero-slogan{color:#e7e5f2;font-size:clamp(1.05rem,2vw,1.28rem);font-weight:500;max-width:46ch;margin-bottom:1.7rem}
+
   /* torn white edge */
   .torn{position:absolute;left:0;right:0;bottom:-1px;z-index:8;width:100%;height:clamp(40px,7vw,90px);display:block}
   .torn svg{display:block;width:100%;height:100%}
@@ -356,15 +362,17 @@
   <div class="wrap nav-inner">
     <a href="#" class="logo">Liberation<span>Coach</span></a>
     <div class="nav-menu" id="navMenu">
-      <a href="#victor">About</a>
+      <a href="#top">Home</a>
       <a href="#routes">Coaching</a>
       <a href="#method">Method</a>
-      <a href="#routes">For Founders</a>
-      <a href="#routes">For Athletes</a>
+      <a href="#founders">For Founders</a>
+      <a href="#athletes">For Athletes</a>
+      <a href="#victor">About</a>
+      <a href="#contact">Contact</a>
     </div>
     <div class="nav-cta">
-      <a href="#apply" class="btn btn-yellow btn-sm nav-desktop-apply">Apply</a>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
+      <a href="#apply" class="btn btn-yellow btn-sm nav-desktop-apply">Apply for 1:1 Coaching</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-controls="navMenu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -372,7 +380,7 @@
 </nav>
 
 <!-- ============ 2. HERO ============ -->
-<header class="hero">
+<header class="hero" id="top">
   <!-- duotone people band -->
   <div class="hero-band" aria-hidden="true">
     <div class="seg side"><img src="assets/bg-gi.jpg" alt=""></div>
@@ -381,30 +389,18 @@
   </div>
   <div class="hero-overlay-dark" aria-hidden="true"></div>
 
-  <!-- geometric overlays -->
-  <svg class="geo geo-tri" viewBox="0 0 120 120" aria-hidden="true">
-    <polygon points="10,110 55,20 100,110" fill="none" stroke="#FFFFFF" stroke-width="3" opacity=".8"/>
-    <polygon points="40,110 72,46 104,110" fill="#FCC22D" opacity=".85"/>
-  </svg>
-  <svg class="geo geo-dots" viewBox="0 0 150 110" aria-hidden="true">
-    <g fill="#FFFFFF">
-      <!-- dot grid -->
-      <circle cx="10" cy="10" r="4"/><circle cx="40" cy="10" r="4"/><circle cx="70" cy="10" r="4"/><circle cx="100" cy="10" r="4"/><circle cx="130" cy="10" r="4"/>
-      <circle cx="10" cy="40" r="4"/><circle cx="40" cy="40" r="4"/><circle cx="70" cy="40" r="4"/><circle cx="100" cy="40" r="4"/><circle cx="130" cy="40" r="4"/>
-      <circle cx="10" cy="70" r="4"/><circle cx="40" cy="70" r="4"/><circle cx="70" cy="70" r="4"/><circle cx="100" cy="70" r="4"/><circle cx="130" cy="70" r="4"/>
-      <circle cx="10" cy="100" r="4"/><circle cx="40" cy="100" r="4"/><circle cx="70" cy="100" r="4"/><circle cx="100" cy="100" r="4"/><circle cx="130" cy="100" r="4"/>
-    </g>
-  </svg>
+  <!-- decorative geometric overlays removed per feedback (shapes competed with Victor). -->
 
   <div class="wrap hero-content">
     <div class="headline-blocks">
-      <span class="hl-line hl-1">Bring the Situation</span><br>
-      <span class="hl-line hl-2">You Keep Revisiting</span>
+      <span class="eyebrow" style="color:var(--yellow);margin-bottom:.6rem">Online 1:1 Performance Coaching</span>
+      <h1 style="color:#fff;font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;letter-spacing:-0.02em;max-width:16ch">1:1 Performance Coaching for Founders &amp; Athletes</h1>
+      <p style="color:#e7e5f2;font-weight:600;font-size:clamp(1rem,2.2vw,1.25rem);margin-top:1rem;max-width:40ch">Bring the situation you keep revisiting — a decision, a conversation, or a moment of pressure you want to handle differently.</p>
     </div>
-    <div class="hero-card" id="apply">
-      <p class="lead">1:1 performance coaching for founders, business owners and adult athletes who want to respond differently under pressure.</p>
-      <a href="#" class="btn btn-yellow">Apply for 1:1 Coaching</a>
-      <p class="fineprint">A no-obligation discovery Zoom call with Victor — not a commitment to coach.</p>
+    <div class="hero-card">
+      <p class="lead">1:1 performance coaching for founders, business owners and adult athletes who want to respond differently under pressure. Online sessions with Victor. Circle access for coaching members.</p>
+      <a href="#apply" class="btn btn-yellow">Apply for 1:1 Coaching</a>
+      <p class="fineprint">After applying, the next step is a discovery Zoom call with Victor, with no obligation to proceed with coaching.</p>
     </div>
   </div>
 
@@ -420,47 +416,39 @@
 <section class="quad">
   <div class="wrap">
     <div class="shead">
-      <span class="eyebrow">What changes</span>
-      <h2>Four things coaching is built to <span class="hl-y">move</span></h2>
+      <span class="eyebrow">The Work</span>
+      <h2>What a Session Can <span class="hl-y">Involve</span></h2>
     </div>
     <div class="quad-grid">
       <div class="quad-item">
         <div class="quad-ic-wrap"><svg class="quad-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-        <h3>More Clarity</h3>
-        <p>Name the real situation instead of carrying a vague, looping worry.</p>
-        <span class="tiny">See it clearly</span>
+        <h3>Examine an Assumption</h3>
+        <p>Look closely at the belief driving the situation in front of you.</p>
+        <span class="tiny">Look closer</span>
       </div>
       <div class="quad-item">
         <div class="quad-ic-wrap"><svg class="quad-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3"/></svg></div>
-        <h3>More Composure</h3>
-        <p>Respond on purpose under pressure instead of reacting on reflex.</p>
-        <span class="tiny">Steady yourself</span>
+        <h3>Ask What You've Avoided</h3>
+        <p>Name the question or conversation you have been putting off.</p>
+        <span class="tiny">Say it out loud</span>
       </div>
       <div class="quad-item">
         <div class="quad-ic-wrap"><svg class="quad-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h10M4 17h7"/><path d="M18 14l3 3-3 3"/></svg></div>
-        <h3>More Control</h3>
-        <p>Make the call with intention, not by default or by avoidance.</p>
+        <h3>Choose an Action</h3>
+        <p>Decide on one next step you want to try — on your own terms.</p>
         <span class="tiny">Decide on purpose</span>
       </div>
       <div class="quad-item">
         <div class="quad-ic-wrap"><svg class="quad-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 7-8"/><path d="M14 7h6v6"/></svg></div>
-        <h3>More Momentum</h3>
-        <p>Take the next concrete step, then build on what you learned.</p>
-        <span class="tiny">Keep moving</span>
+        <h3>Review What Happened</h3>
+        <p>Come back to what you noticed and what you would adjust next time.</p>
+        <span class="tiny">Learn and adjust</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ STATS STRIP ============ -->
-<section class="stats">
-  <div class="stats-grid">
-    <div class="stat"><div class="snum">180+</div><span class="slab">Podcast Episodes</span></div>
-    <div class="stat"><div class="snum">2</div><span class="slab">Audiences Served</span></div>
-    <div class="stat"><div class="snum">18+</div><span class="slab">Adults Only</span></div>
-    <div class="stat"><div class="snum">Online</div><span class="slab">Worldwide</span></div>
-  </div>
-</section>
+<!-- STATS strip removed per feedback: numeric highlights (180+/2 Audiences/18+) dropped. -->
 
 <!-- ============ TRUST LINE ============ -->
 <section class="trust">
@@ -477,7 +465,7 @@
       <h2>Where does the pressure <span class="hl-y">show up</span> for you?</h2>
     </div>
 
-    <div class="route-row">
+    <div class="route-row" id="founders">
       <div class="route-img imgwrap">
         <span class="route-tag">For Founders &amp; Business Owners</span>
         <img src="assets/bg-city-night.jpg" alt="City skyline lit up at night, viewed across a river">
@@ -495,7 +483,7 @@
       </div>
     </div>
 
-    <div class="route-row flip">
+    <div class="route-row flip" id="athletes">
       <div class="route-img imgwrap">
         <span class="route-tag">For Adult Athletes</span>
         <img src="assets/bg-gi.jpg" alt="Martial arts practitioner in a white gi during training">
@@ -530,7 +518,7 @@
         <li><span class="q-num">2</span><strong>What are you assuming it means?</strong></li>
         <li><span class="q-num">3</span><strong>What do you need to find out before deciding?</strong></li>
       </ul>
-      <p class="method-note">In coaching, you and Victor work through those questions together — then review what you did and what you learned.</p>
+      <p class="method-note">In coaching, you and Victor work through those questions together — noticing the emotional response underneath the situation, then reviewing what you did and what you learned.</p>
     </div>
   </div>
 </section>
@@ -544,18 +532,7 @@
 
 <!-- ============ 6. MEET VICTOR ============ -->
 <section class="victor" id="victor">
-  <svg class="geo-dots-dark" viewBox="0 0 170 120" aria-hidden="true">
-    <g fill="#FCC22D">
-      <circle cx="10" cy="10" r="4"/><circle cx="45" cy="10" r="4"/><circle cx="80" cy="10" r="4"/><circle cx="115" cy="10" r="4"/><circle cx="150" cy="10" r="4"/>
-      <circle cx="10" cy="45" r="4"/><circle cx="45" cy="45" r="4"/><circle cx="80" cy="45" r="4"/><circle cx="115" cy="45" r="4"/><circle cx="150" cy="45" r="4"/>
-      <circle cx="10" cy="80" r="4"/><circle cx="45" cy="80" r="4"/><circle cx="80" cy="80" r="4"/><circle cx="115" cy="80" r="4"/><circle cx="150" cy="80" r="4"/>
-      <circle cx="10" cy="115" r="4"/><circle cx="45" cy="115" r="4"/><circle cx="80" cy="115" r="4"/><circle cx="115" cy="115" r="4"/><circle cx="150" cy="115" r="4"/>
-    </g>
-  </svg>
-  <svg class="geo-tri-v" viewBox="0 0 90 90" aria-hidden="true">
-    <polygon points="8,82 45,14 82,82" fill="none" stroke="#1F8FA6" stroke-width="3"/>
-    <polygon points="30,82 52,40 74,82" fill="#1F8FA6" opacity=".55"/>
-  </svg>
+  <!-- decorative dot grid + triangles removed per feedback (they competed with Victor). -->
   <div class="wrap victor-grid">
     <!-- LEFT: media column filled with photo + episode cards + mini stats -->
     <div class="victor-media">
@@ -571,20 +548,22 @@
         <span><span class="ep-t">Conversations on YouTube</span><span class="ep-s">Watch the channel</span></span>
       </a>
       <div class="victor-mini">
-        <div class="vmini"><div class="vn">180+</div><div class="vl">Episodes</div></div>
-        <div class="vmini"><div class="vn">Austin</div><div class="vl">Texas · Online</div></div>
+        <div class="vmini"><div class="vn">Online</div><div class="vl">Worldwide</div></div>
+        <div class="vmini"><div class="vn">1:1</div><div class="vl">Individual work</div></div>
       </div>
     </div>
     <!-- RIGHT: text column -->
     <div class="victor-txt">
       <span class="eyebrow">Meet Victor</span>
-      <h2>Coaching from <em>Austin, Texas</em></h2>
-      <p class="bio">Victor Pierantoni is the coach behind Liberation Coach. His background includes martial arts and a long interest in how Zen and Stoic philosophy relate to daily life. He hosts the Zen Stoic Path Show — more than 180 conversations — and coaches online from Austin, Texas.</p>
+      <h2>A coach with a background in <em>martial arts and philosophy</em></h2>
+      <!-- SOURCE-CHECK: episode count and Austin base were promotional specifics; confirm with Victor before publishing. -->
+      <p class="bio">Victor Pierantoni is the coach behind Liberation Coach. His background includes martial arts and a long interest in how Zen and Stoic philosophy relate to daily life. He hosts the Zen Stoic Path Show and coaches online, worldwide.</p>
       <ul class="bring-list">
         <li>A martial-arts background that shapes how he talks about pressure and composure.</li>
         <li>A working interest in how Zen and Stoic ideas apply to everyday decisions.</li>
         <li>Years of recorded conversations with guests on The Zen Stoic Path Show.</li>
       </ul>
+      <!-- SOURCE-CHECK: confirm this quote/attribution with Victor before publishing. -->
       <blockquote class="victor-quote">"It's better to be a warrior in the garden than a gardener in a war."</blockquote>
       <div class="victor-btns">
         <a href="https://podcasts.apple.com/us/podcast/zen-stoic-path-show/id1571381944" target="_blank" rel="noopener" class="btn btn-yellow btn-sm">Listen to the Podcast</a>
@@ -595,7 +574,8 @@
 </section>
 
 <!-- ============ 7. HOW IT BEGINS ============ -->
-<section class="begins">
+<!-- TODO: point every Apply button to the real /apply page when built. -->
+<section class="begins" id="apply">
   <svg class="geo-dots-b" viewBox="0 0 150 110" aria-hidden="true">
     <g fill="#221C4B" opacity=".9">
       <circle cx="10" cy="10" r="4"/><circle cx="40" cy="10" r="4"/><circle cx="70" cy="10" r="4"/><circle cx="100" cy="10" r="4"/><circle cx="130" cy="10" r="4"/>
@@ -672,14 +652,14 @@
     <polygon points="10,100 55,18 100,100" fill="none" stroke="#FCC22D" stroke-width="3"/>
   </svg>
   <div class="wrap">
-    <span class="hl-final">Bring the situation you want to approach differently.</span>
+    <h2 style="color:#fff;font-size:clamp(1.8rem,4.5vw,3rem);line-height:1.12;max-width:20ch;margin:0 auto 1.8rem">Bring the Situation You Want to Approach Differently</h2>
     <div><a href="#apply" class="btn btn-yellow">Apply for 1:1 Coaching</a></div>
-    <p class="fine">A no-obligation discovery Zoom call with Victor — not a commitment to coach.</p>
+    <p class="fine">After applying, the next step is a discovery Zoom call with Victor, with no obligation to proceed with coaching.</p>
   </div>
 </section>
 
 <!-- ============ 10. FOOTER ============ -->
-<footer class="footer">
+<footer class="footer" id="contact">
   <div class="wrap">
     <div class="footer-grid">
       <div>
@@ -689,8 +669,8 @@
       <div>
         <h4>Coaching</h4>
         <ul>
-          <li><a href="#routes">For Founders</a></li>
-          <li><a href="#routes">For Athletes</a></li>
+          <li><a href="#founders">For Founders</a></li>
+          <li><a href="#athletes">For Athletes</a></li>
           <li><a href="#method">The Method</a></li>
           <li><a href="#apply">Apply</a></li>
         </ul>
@@ -729,7 +709,8 @@
   var ham = document.getElementById('hamburger');
   var menu = document.getElementById('navMenu');
   ham.addEventListener('click', function(){
-    menu.classList.toggle('open');
+    var open = menu.classList.toggle('open');
+    ham.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
   // close mobile menu on link click
   menu.querySelectorAll('a').forEach(function(a){

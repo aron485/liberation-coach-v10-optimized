@@ -84,7 +84,9 @@
   .hero h1{font-size:clamp(2.1rem,5.2vw,3.7rem);font-weight:800;line-height:1.08;letter-spacing:-.02em;margin-bottom:22px;}
   .brush-word{position:relative;display:inline-block;white-space:nowrap;}
   .brush-word .brush{position:absolute;left:-2%;bottom:-.28em;width:104%;height:.4em;pointer-events:none;}
-  .hero-sub{font-size:clamp(1.02rem,1.5vw,1.18rem);color:rgba(255,255,255,.86);max-width:36ch;margin-bottom:28px;}
+  .hero-sub{font-size:clamp(1.02rem,1.5vw,1.18rem);color:rgba(255,255,255,.86);max-width:36ch;margin-bottom:14px;}
+  .hero-label{display:inline-block;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;color:var(--gold);margin-bottom:14px;}
+  .hero-delivery{font-size:.98rem;color:rgba(255,255,255,.78);max-width:40ch;margin-bottom:22px;}
   .hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-bottom:16px;}
   .fineprint{font-size:.86rem;color:rgba(255,255,255,.6);max-width:46ch;line-height:1.5;}
 
@@ -276,8 +278,7 @@
     <div class="nav-row1">
       <a href="#" class="brand">Liberation<span>Coach</span></a>
       <nav class="nav-utility">
-        <a href="#meet" class="util">About</a>
-        <a href="#apply" class="util">Contact</a>
+        <a href="#contact" class="util">Contact</a>
         <button class="search-btn" aria-label="Search">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         </button>
@@ -291,10 +292,11 @@
   <div class="nav-row2">
     <div class="wrap">
       <ul class="nav-menu">
+        <li><a href="#top">Home</a></li>
         <li><a href="#routes">Coaching</a></li>
-        <li><a href="#impact">Method</a></li>
-        <li><a href="#routes">For Founders</a></li>
-        <li><a href="#routes">For Athletes</a></li>
+        <li><a href="#method">Method</a></li>
+        <li><a href="#founders">For Founders</a></li>
+        <li><a href="#athletes">For Athletes</a></li>
         <li><a href="#meet">About</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
@@ -302,61 +304,54 @@
   </div>
   <div class="mobile-panel" id="mobilePanel">
     <ul>
+      <li><a href="#top">Home</a></li>
       <li><a href="#routes">Coaching</a></li>
-      <li><a href="#impact">Method</a></li>
-      <li><a href="#routes">For Founders</a></li>
-      <li><a href="#routes">For Athletes</a></li>
+      <li><a href="#method">Method</a></li>
+      <li><a href="#founders">For Founders</a></li>
+      <li><a href="#athletes">For Athletes</a></li>
       <li><a href="#meet">About</a></li>
       <li><a href="#faq">FAQ</a></li>
-      <li><a href="#apply">Contact</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 </header>
 
 <!-- ============ HERO ============ -->
-<section class="hero">
-  <!-- sparkle doodles -->
-  <svg class="sparkle sp1" viewBox="0 0 24 24" fill="none" stroke="#EFCB30" stroke-width="1.6" stroke-linecap="round"><path d="M12 2 L13.4 10.6 L22 12 L13.4 13.4 L12 22 L10.6 13.4 L2 12 L10.6 10.6 Z"/></svg>
-  <svg class="sparkle sp2" viewBox="0 0 24 24" fill="none" stroke="#F7EFE2" stroke-width="1.6" stroke-linecap="round"><path d="M12 3 L13 11 L21 12 L13 13 L12 21 L11 13 L3 12 L11 11 Z"/></svg>
-  <svg class="sparkle sp3" viewBox="0 0 24 24" fill="none" stroke="#EFCB30" stroke-width="1.6" stroke-linecap="round"><path d="M12 4 L12.8 11.2 L20 12 L12.8 12.8 L12 20 L11.2 12.8 L4 12 L11.2 11.2 Z"/></svg>
+<section class="hero" id="top">
   <div class="wrap">
     <div class="hero-inner">
       <div class="hero-text">
-        <h1>1:1 Performance Coaching for Founders &amp;
-          <span class="brush-word">Athletes<svg class="brush" viewBox="0 0 220 24" preserveAspectRatio="none" fill="none"><path d="M4 15 C 40 6, 70 20, 108 11 C 150 2, 180 18, 216 9" stroke="#EFCB30" stroke-width="7" stroke-linecap="round"/></svg></span>
-        </h1>
+        <span class="hero-label">Work with Victor Pierantoni</span>
+        <h1>1:1 Performance Coaching for Founders &amp; Athletes</h1>
         <p class="hero-sub">Bring a decision you keep revisiting, a conversation you are putting off, or a moment of pressure you want to handle differently.</p>
+        <p class="hero-delivery">Online sessions with Victor. Circle access for coaching members.</p>
         <div class="hero-cta">
           <a href="#apply" class="pill pill-gold">Apply for 1:1 Coaching →</a>
         </div>
-        <p class="fineprint">Applying opens a no-obligation discovery Zoom call with Victor — not a commitment to coach.</p>
+        <p class="fineprint">After applying, the next step is a discovery Zoom call with Victor, with no obligation to proceed with coaching.</p>
       </div>
       <div class="hero-visual">
         <div class="gold-blob"></div>
-        <img class="hero-photo" src="assets/victor-avatar.jpg" alt="Victor Pierantoni, performance coach, smiling in a studio portrait">
-        <div class="stat-chip"><b>180+</b> podcast episodes</div>
+        <img class="hero-photo" src="assets/victor-avatar.jpg" alt="Victor Pierantoni, performance coach, in a studio portrait">
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============ IMPACT PANEL ============ -->
-<div class="wrap impact-wrap" id="impact">
+<div class="wrap impact-wrap" id="method">
   <div class="impact">
     <div class="impact-col">
-      <span class="impact-step">STEP 01</span>
-      <h3>Create Clarity</h3>
-      <p>Name the real situation in front of you.</p>
+      <h3>Examine an assumption</h3>
+      <p>Look at the belief sitting underneath the situation and test whether it still holds.</p>
     </div>
     <div class="impact-col">
-      <span class="impact-step">STEP 02</span>
-      <h3>Build Composure</h3>
-      <p>Respond instead of react under pressure.</p>
+      <h3>Ask the avoided question</h3>
+      <p>Name the conversation or question you have been putting off, and what makes it hard.</p>
     </div>
     <div class="impact-col">
-      <span class="impact-step">STEP 03</span>
-      <h3>Decide and Act</h3>
-      <p>Take a next step you chose for yourself.</p>
+      <h3>Choose an action, then review it</h3>
+      <p>Decide on a next step you choose for yourself, then look back at what actually happened.</p>
     </div>
   </div>
 </div>
@@ -374,14 +369,12 @@
 
 <!-- ============ ROUTES ============ -->
 <section class="band" id="routes">
-  <svg class="sec-spark" style="top:6%;right:4%;width:40px;" viewBox="0 0 24 24" fill="none" stroke="#EFCB30" stroke-width="1.6" stroke-linecap="round"><path d="M12 2 L13.4 10.6 L22 12 L13.4 13.4 L12 22 L10.6 13.4 L2 12 L10.6 10.6 Z"/></svg>
   <div class="wrap">
     <span class="eyebrow">Where to Start</span>
-    <h2 class="sec-head">Two routes into the same
-      <span class="brush-word dark">work<svg class="brush" viewBox="0 0 160 24" preserveAspectRatio="none" fill="none"><path d="M4 15 C 36 7, 60 19, 92 11 C 124 4, 140 17, 156 10" stroke="#EFCB30" stroke-width="7" stroke-linecap="round"/></svg></span>
-    </h2>
+    <h2 class="sec-head">Two routes into the same work</h2>
     <div class="routes-grid">
-      <article class="route-card">
+      <!-- TODO: link this card to the real /founders page -->
+      <article class="route-card" id="founders">
         <span class="stock-label">Stock placeholder</span>
         <img class="photo" src="assets/bg-city-night.jpg" alt="City skyline at night representing business leadership">
         <div class="route-body">
@@ -389,14 +382,15 @@
           <h3>Leading, under pressure</h3>
           <p>Leading a business can put you between a decision and the people who need an answer. Start with a real situation and the response you want to change.</p>
           <div class="route-foot">
-            <span class="route-tag">Start here</span>
-            <a href="#apply" class="arrow-btn" aria-label="For founders and business owners">
+            <span class="route-tag">Explore Founder Coaching</span>
+            <a href="#founders" class="arrow-btn" aria-label="Explore Founder Coaching">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
           </div>
         </div>
       </article>
-      <article class="route-card">
+      <!-- TODO: link this card to the real /athletes page -->
+      <article class="route-card" id="athletes">
         <span class="stock-label">Stock placeholder</span>
         <img class="photo" src="assets/bg-gi.jpg" alt="Martial arts gi folded, representing athletic discipline">
         <div class="route-body">
@@ -404,8 +398,8 @@
           <h3>Focus, when it counts</h3>
           <p>You may trust a skill in practice and begin to doubt it in competition. Start with a moment your focus or confidence changed — and what you noticed.</p>
           <div class="route-foot">
-            <span class="route-tag">Start here</span>
-            <a href="#apply" class="arrow-btn" aria-label="For adult athletes">
+            <span class="route-tag">Explore Coaching for Athletes</span>
+            <a href="#athletes" class="arrow-btn" aria-label="Explore Coaching for Athletes">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
           </div>
@@ -434,9 +428,9 @@
           <img class="meet-photo" src="assets/victor-cream.jpg" alt="Victor Pierantoni, founder and coach of Liberation Coach">
         </div>
         <div class="meet-tiles">
-          <div class="meet-tile"><b>180+</b><span>Episodes</span></div>
-          <div class="meet-tile"><b>Austin, TX</b><span>Home Base</span></div>
           <div class="meet-tile"><b>Online</b><span>Worldwide</span></div>
+          <div class="meet-tile"><b>1:1</b><span>Founders &amp; athletes</span></div>
+          <div class="meet-tile"><b>Martial arts</b><span>&amp; philosophy</span></div>
         </div>
         <div class="meet-quote">
           Work grounded in martial arts and a long interest in how Zen and Stoic philosophy meet daily life.
@@ -446,7 +440,8 @@
       <div class="meet-text">
         <span class="eyebrow" style="color:var(--gold)">Meet Your Coach</span>
         <h2>Victor Pierantoni</h2>
-        <p>Victor Pierantoni is the coach behind Liberation Coach, offering 1:1 coaching for founders, business owners and adult athletes. His background includes martial arts and a long interest in how Zen and Stoic philosophy relate to daily life. He hosts the Zen Stoic Path Show — more than 180 conversations — and coaches online from Austin, Texas.</p>
+        <!-- SOURCE-CHECK: "more than 180 conversations" + "Austin, Texas" — verify against client material before publishing -->
+        <p>Victor Pierantoni is the coach behind Liberation Coach, offering 1:1 coaching for founders, business owners and adult athletes. His background includes martial arts and a long interest in how Zen and Stoic philosophy relate to daily life. He hosts the Zen Stoic Path Show and coaches online.</p>
         <div class="meet-focus">
           <p class="meet-focus-label">Where the work goes</p>
           <ul class="meet-focus-list">
@@ -461,6 +456,7 @@
         </div>
         <div class="meet-episodes">
           <p class="meet-focus-label">Recent on the podcast</p>
+          <!-- TODO: link each episode to its real individual URL (all three currently point to the show feed) -->
           <a class="ep" href="https://podcasts.apple.com/us/podcast/zen-stoic-path-show/id1571381944" target="_blank" rel="noopener"><span class="ep-ic">&#9654;</span>The 5 Pillars of Emotional Currency</a>
           <a class="ep" href="https://podcasts.apple.com/us/podcast/zen-stoic-path-show/id1571381944" target="_blank" rel="noopener"><span class="ep-ic">&#9654;</span>Living Your Purpose with Ikigai</a>
           <a class="ep" href="https://podcasts.apple.com/us/podcast/zen-stoic-path-show/id1571381944" target="_blank" rel="noopener"><span class="ep-ic">&#9654;</span>The Key To Finding Balance</a>
@@ -470,30 +466,24 @@
   </div>
 </section>
 
-<!-- ============ STATS BAND ============ -->
-<section class="band stats">
+<!-- ============ REFLECTION & EMOTIONAL AWARENESS ============ -->
+<section class="band stats" id="reflection">
   <div class="wrap">
     <div class="stats-head">
-      <span class="eyebrow">By The Numbers</span>
-      <h2>A grounded, focused practice</h2>
+      <span class="eyebrow">What the work involves</span>
+      <h2>Reflection and emotional awareness</h2>
     </div>
-    <div class="stats-grid">
-      <div class="stat"><b>180+</b><span>Episodes</span><small>Of the Zen Stoic Path Show</small></div>
-      <div class="stat"><b>2</b><span>Audiences</span><small>Founders and adult athletes</small></div>
-      <div class="stat"><b>18+</b><span>Only</span><small>Adults aged eighteen and up</small></div>
-      <div class="stat"><b>Online</b><span>Worldwide</span><small>Work from wherever you are</small></div>
-    </div>
+    <p style="max-width:62ch;margin:0 auto;text-align:center;color:rgba(255,255,255,.85);font-size:1.05rem;line-height:1.7;position:relative;z-index:1;">
+      Coaching here is a conversation. Victor works with how you respond to a challenge — noticing the reaction you want to change, paying attention to what you feel in the moment, and turning a broad concern into something specific you can work on. The aim is a clearer question, a checked assumption, or an action you choose to try. It is open to founders, business owners and adult athletes aged 18 and older, and takes place online.
+    </p>
   </div>
 </section>
 
 <!-- ============ HOW IT BEGINS ============ -->
 <section class="band" id="begins">
-  <svg class="sec-spark" style="bottom:10%;left:3%;width:34px;opacity:.4;" viewBox="0 0 24 24" fill="none" stroke="#2B379B" stroke-width="1.6" stroke-linecap="round"><path d="M12 3 L13 11 L21 12 L13 13 L12 21 L11 13 L3 12 L11 11 Z"/></svg>
   <div class="wrap">
     <span class="eyebrow">The Process</span>
-    <h2 class="sec-head">How it
-      <span class="brush-word dark">begins<svg class="brush" viewBox="0 0 170 24" preserveAspectRatio="none" fill="none"><path d="M4 15 C 38 7, 64 19, 98 11 C 130 4, 150 17, 166 10" stroke="#EFCB30" stroke-width="7" stroke-linecap="round"/></svg></span>
-    </h2>
+    <h2 class="sec-head">A conversation is the next step</h2>
     <div class="begins-grid">
       <div class="step">
         <div class="step-head"><div class="step-num">1</div><span class="step-kick">First</span></div>
@@ -519,12 +509,9 @@
 
 <!-- ============ FAQ ============ -->
 <section class="band" id="faq" style="background:var(--white);">
-  <svg class="sec-spark" style="top:8%;right:6%;width:36px;opacity:.4;" viewBox="0 0 24 24" fill="none" stroke="#2B379B" stroke-width="1.6" stroke-linecap="round"><path d="M12 4 L12.8 11.2 L20 12 L12.8 12.8 L12 20 L11.2 12.8 L4 12 L11.2 11.2 Z"/></svg>
   <div class="wrap">
     <span class="eyebrow" style="display:block;text-align:center;">Questions</span>
-    <h2 class="sec-head" style="text-align:center;">Frequently
-      <span class="brush-word dark">asked<svg class="brush" viewBox="0 0 150 24" preserveAspectRatio="none" fill="none"><path d="M4 15 C 34 7, 58 19, 88 11 C 118 4, 134 17, 146 10" stroke="#EFCB30" stroke-width="7" stroke-linecap="round"/></svg></span>
-    </h2>
+    <h2 class="sec-head" style="text-align:center;">Quick answers</h2>
     <div class="faq-list">
       <details class="faq" open>
         <summary>Are sessions online? <span class="ic">+</span></summary>
@@ -552,30 +539,27 @@
 
 <!-- ============ FINAL CTA ============ -->
 <section class="band final" id="apply">
-  <svg class="sparkle sp1" viewBox="0 0 24 24" fill="none" stroke="#EFCB30" stroke-width="1.6" stroke-linecap="round" style="top:18%;left:8%;right:auto;width:40px;opacity:.5;"><path d="M12 2 L13.4 10.6 L22 12 L13.4 13.4 L12 22 L10.6 13.4 L2 12 L10.6 10.6 Z"/></svg>
-  <svg class="sparkle sp2" viewBox="0 0 24 24" fill="none" stroke="#F7EFE2" stroke-width="1.6" stroke-linecap="round" style="bottom:20%;right:10%;width:32px;opacity:.4;"><path d="M12 3 L13 11 L21 12 L13 13 L12 21 L11 13 L3 12 L11 11 Z"/></svg>
   <div class="wrap">
-    <h2>Bring the situation you want to approach
-      <span class="brush-word">differently<svg class="brush" viewBox="0 0 260 24" preserveAspectRatio="none" fill="none" style="bottom:-.18em;"><path d="M4 15 C 50 6, 90 20, 140 11 C 190 3, 220 18, 256 10" stroke="#EFCB30" stroke-width="7" stroke-linecap="round"/></svg></span>
-    </h2>
-    <p>Applying opens a no-obligation discovery Zoom call with Victor — a conversation to see if the work fits.</p>
+    <h2>Bring the situation you want to approach differently</h2>
+    <p>After applying, the next step is a discovery Zoom call with Victor, with no obligation to proceed with coaching.</p>
+    <!-- TODO: point to the real /apply page once built -->
     <a href="#apply" class="pill pill-gold">Apply for 1:1 Coaching →</a>
   </div>
 </section>
 
 <!-- ============ FOOTER ============ -->
-<footer>
+<footer id="contact">
   <div class="wrap">
     <div class="foot-top">
       <div class="foot-brand">
-        <a href="#" class="brand">Liberation<span style="color:var(--gold)">Coach</span></a>
+        <a href="#top" class="brand">Liberation<span style="color:var(--gold)">Coach</span></a>
         <p>Online 1:1 performance coaching with Victor Pierantoni for founders, business owners and adult athletes. Liberation Coach Inc.</p>
       </div>
       <div class="foot-col">
         <h4>Coaching</h4>
-        <a href="#routes">For Founders</a>
-        <a href="#routes">For Athletes</a>
-        <a href="#impact">The Method</a>
+        <a href="#founders">For Founders</a>
+        <a href="#athletes">For Athletes</a>
+        <a href="#method">The Method</a>
         <a href="#begins">How It Begins</a>
       </div>
       <div class="foot-col">
@@ -588,9 +572,8 @@
       <div class="foot-col">
         <h4>Company</h4>
         <a href="#apply">Apply</a>
-        <a href="#apply">Contact</a>
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
+        <!-- TODO: point to the real /contact page once built -->
+        <a href="#contact">Contact</a>
       </div>
     </div>
     <div class="foot-bottom">

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Liberation Coach — Performance Coaching, One to One</title>
+<title>Liberation Coach — 1:1 Performance Coaching for Founders &amp; Athletes</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
@@ -89,14 +89,15 @@ h1,h2,h3{line-height:1.12;font-weight:900;letter-spacing:-.01em;}
   position:relative;min-height:94vh;display:flex;align-items:center;
   color:var(--white);overflow:hidden;
 }
+/* Lighter overlay + wider position = less extreme face enlargement. A truly natural crop needs a wider-framed source photo. */
 .hero-bg{
   position:absolute;inset:0;z-index:0;
-  background:url('assets/victor-studio.jpg') center 22%/cover no-repeat;
-  filter:grayscale(1) brightness(.55) contrast(1.05);
+  background:url('assets/victor-studio.jpg') center 34%/cover no-repeat;
+  filter:grayscale(1) brightness(.64) contrast(1.02);
 }
 .hero-scrim{
   position:absolute;inset:0;z-index:1;
-  background:linear-gradient(100deg,rgba(39,39,42,.92) 0%,rgba(39,39,42,.72) 42%,rgba(39,39,42,.3) 100%);
+  background:linear-gradient(100deg,rgba(39,39,42,.86) 0%,rgba(39,39,42,.6) 46%,rgba(39,39,42,.22) 100%);
 }
 .hero-inner{position:relative;z-index:2;width:100%;padding-top:110px;padding-bottom:140px;}
 .hero-content{max-width:680px;}
@@ -106,7 +107,7 @@ h1,h2,h3{line-height:1.12;font-weight:900;letter-spacing:-.01em;}
 }
 .hero h1{
   font-size:clamp(2.2rem,5.6vw,3.5rem);color:var(--amber);font-weight:900;
-  margin-bottom:24px;max-width:14ch;
+  margin-bottom:24px;max-width:17ch;text-wrap:balance;
 }
 .hero p.lead{font-size:clamp(1.05rem,1.8vw,1.3rem);color:var(--white);max-width:52ch;margin-bottom:30px;opacity:.95;}
 .hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:20px;}
@@ -372,8 +373,9 @@ details p{padding:0 26px 24px;color:#3f3f46;font-size:1.03rem;}
     <span class="topbar-label">As Heard On</span>
     <div class="topbar-links">
       <a href="https://podcasts.apple.com/us/podcast/zen-stoic-path-show/id1571381944" target="_blank" rel="noopener">The Zen Stoic Path Show</a>
-      <a href="#about">Acta Non Verba</a>
-      <a href="#about">Super Mamas</a>
+      <!-- TODO: link each guest interview to its real episode URL (previously pointed to #about, which was misleading) -->
+      <a>Acta Non Verba</a>
+      <a>Super Mamas</a>
     </div>
   </div>
 </div>
@@ -383,6 +385,7 @@ details p{padding:0 26px 24px;color:#3f3f46;font-size:1.03rem;}
   <div class="wrap nav-inner">
     <a href="#top" class="brand">Liberation Coach<span class="dot">.</span></a>
     <ul class="nav-menu">
+      <li><a href="#top">Home</a></li>
       <li><a href="#coaching">Coaching</a></li>
       <li><a href="#method">Method</a></li>
       <li><a href="#founders">For Founders</a></li>
@@ -395,9 +398,9 @@ details p{padding:0 26px 24px;color:#3f3f46;font-size:1.03rem;}
         <a href="https://podcasts.apple.com/us/podcast/zen-stoic-path-show/id1571381944" target="_blank" rel="noopener">Podcast</a>
         <a href="https://www.youtube.com/@victor.liberationcoach" target="_blank" rel="noopener">YouTube</a>
       </div>
-      <a href="#apply" class="btn btn-amber">Apply</a>
+      <a href="#apply" class="btn btn-amber">Apply for 1:1 Coaching</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-controls="nav" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -409,19 +412,21 @@ details p{padding:0 26px 24px;color:#3f3f46;font-size:1.03rem;}
   <div class="hero-scrim"></div>
   <div class="wrap hero-inner">
     <div class="hero-content">
-      <span class="eyebrow">Online 1:1 Performance Coaching</span>
-      <h1>Performance coaching, delivered one to one.</h1>
-      <p class="lead">Liberation Coach is individual work with Victor Pierantoni on how you respond to a challenge and what you choose to do next — for founders, business owners and adult athletes.</p>
+      <span class="eyebrow">Work with Victor Pierantoni</span>
+      <h1>1:1 performance coaching for founders and athletes</h1>
+      <p class="lead">Performance coaching at Liberation Coach is individual work with Victor Pierantoni on how you respond to a challenge and what you choose to do next. Founders, business owners and athletes aged 18 and older can bring a specific situation, examine the assumptions around it and consider a practical next step.</p>
+      <p class="lead" style="font-size:1rem;opacity:.9;margin-bottom:26px;">Online sessions with Victor. Circle access for coaching members.</p>
       <div class="hero-cta">
+        <!-- TODO: point to real /apply page when built -->
         <a href="#apply" class="btn btn-amber">Apply for 1:1 Coaching</a>
-        <span class="finepoint">A no-obligation discovery call, not a commitment to coach.</span>
+        <span class="finepoint">After applying, the next step is a discovery Zoom call with Victor, with no obligation to proceed with coaching.</span>
       </div>
     </div>
   </div>
 </header>
 
-<!-- VERTICAL EDGE TAB -->
-<a href="#apply" class="edge-tab">Apply — No Obligation</a>
+<!-- Vertical rotated "Apply" edge tab removed per feedback — Apply already appears in the nav, in each section, and in the mobile sticky bar. -->
+
 
 <!-- OVERLAP CARDS -->
 <div class="cards-overlap">
@@ -434,8 +439,8 @@ details p{padding:0 26px 24px;color:#3f3f46;font-size:1.03rem;}
           <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/><path d="M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg>
         </div>
         <h3>For Founders</h3>
-        <p>Lead without second-guessing every call.</p>
-        <a href="#founders" class="btn btn-charcoal">Explore &rarr;</a>
+        <p>Bring a decision you keep revisiting or a conversation you have been putting off.</p>
+        <a href="#coaching" class="btn btn-charcoal">Explore Founder Coaching &rarr;</a>
       </div>
       <!-- Card B -->
       <div class="icard" id="athletes">
@@ -444,8 +449,8 @@ details p{padding:0 26px 24px;color:#3f3f46;font-size:1.03rem;}
           <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M6 22l3-7 3 2 2 5M9 15l-1-5 5-1 3 3 3 1M8 10l-2 1"/></svg>
         </div>
         <h3>For Athletes</h3>
-        <p>Trust the skill when the pressure is on.</p>
-        <a href="#athletes" class="btn btn-charcoal">Explore &rarr;</a>
+        <p>Bring a moment where your focus or confidence changed under pressure.</p>
+        <a href="#coaching" class="btn btn-charcoal">Explore Coaching for Athletes &rarr;</a>
       </div>
       <!-- Card C -->
       <div class="icard" id="method-card">
@@ -454,8 +459,8 @@ details p{padding:0 26px 24px;color:#3f3f46;font-size:1.03rem;}
           <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
         </div>
         <h3>The Method</h3>
-        <p>Turn a broad concern into one situation you can work on.</p>
-        <a href="#method" class="btn btn-charcoal">Explore &rarr;</a>
+        <p>Turn a broad concern into something you can work on.</p>
+        <a href="#method" class="btn btn-charcoal">See What a Session Can Involve &rarr;</a>
       </div>
     </div>
   </div>
@@ -469,7 +474,7 @@ details p{padding:0 26px 24px;color:#3f3f46;font-size:1.03rem;}
         <p class="sec-head-eyebrow">Individual Work</p>
         <div class="amber-rule"></div>
         <h2>Individual work, not a program</h2>
-        <p>Founders, business owners and athletes aged 18 and older bring a specific situation, examine the assumptions around it, and consider a practical next step. No scripts, no program to complete — one person, one situation, one honest conversation at a time.</p>
+        <p>Founders, business owners and athletes aged 18 and older bring a specific situation, examine the assumptions around it, and consider a practical next step — one person, one situation, one honest conversation at a time.</p>
         <a href="#method" class="btn btn-charcoal">See the method &rarr;</a>
       </div>
       <div class="bring-card">
@@ -494,11 +499,13 @@ details p{padding:0 26px 24px;color:#3f3f46;font-size:1.03rem;}
         <div class="story-photo">
           <img src="assets/victor-green.jpg" alt="Victor Pierantoni, founder and coach of Liberation Coach, in a composed portrait">
           <span class="photo-accent"></span>
+          <!-- SOURCE-CHECK: "Austin, Texas" — confirm against the client's own material before publishing -->
           <div class="photo-cap">Victor Pierantoni &middot; Austin, Texas</div>
         </div>
         <div class="photo-facts">
+          <!-- SOURCE-CHECK: "180+" episode count — verify before publishing -->
           <div class="pfact"><div class="pf-num">180+</div><div class="pf-lbl">Zen Stoic Path Show episodes</div></div>
-          <div class="pfact"><div class="pf-num">Austin</div><div class="pf-lbl">Coaches online from Texas</div></div>
+          <div class="pfact"><div class="pf-num">Online</div><div class="pf-lbl">Sessions worldwide over Zoom</div></div>
         </div>
       </div>
       <div class="story-text">
@@ -506,6 +513,7 @@ details p{padding:0 26px 24px;color:#3f3f46;font-size:1.03rem;}
         <div class="amber-rule"></div>
         <h2>A background in martial arts and philosophy</h2>
         <p>Victor Pierantoni is the coach behind Liberation Coach. His background includes martial arts and a long interest in how Zen and Stoic philosophy relate to daily life. He hosts the Zen Stoic Path Show — more than 180 conversations — and coaches online from Austin, Texas.</p>
+        <!-- SOURCE-CHECK: quotation — confirm attribution and permission to use -->
         <blockquote class="story-quote">"It's better to be a warrior in the garden than a gardener in a war."</blockquote>
         <div class="pill-row">
           <a class="pill" href="https://podcasts.apple.com/us/podcast/zen-stoic-path-show/id1571381944" target="_blank" rel="noopener">
@@ -529,10 +537,10 @@ details p{padding:0 26px 24px;color:#3f3f46;font-size:1.03rem;}
       <div class="method-copy">
         <p class="sec-head-eyebrow">The Method</p>
         <div class="amber-rule"></div>
-        <h2>What the work is for</h2>
-        <p>In coaching, you and Victor work through those questions together — then review what you did and what you learned.</p>
+        <h2>Reflection and emotional awareness</h2>
+        <p>You and Victor work through reflective questions about a specific situation — what happened, what you are assuming it means, and what you would need to find out before deciding. Part of the work is noticing the emotional response underneath, so you can choose a next step instead of reacting to it.</p>
         <div class="method-note">
-          <p><strong>No scripts.</strong> Each conversation starts from your situation, not a fixed curriculum — and you leave with a next step you chose.</p>
+          <p><strong>One situation at a time.</strong> Each conversation starts from what you bring, then reviews what you tried and what you learned.</p>
         </div>
       </div>
       <ol class="q-list">
@@ -548,17 +556,12 @@ details p{padding:0 26px 24px;color:#3f3f46;font-size:1.03rem;}
 <section class="sec-pad sec-dark" style="background:#17171a;border-top:1px solid rgba(255,194,13,.22);">
   <div class="wrap">
     <div class="stats-head">
-      <p class="sec-head-eyebrow">The Advantage</p>
+      <p class="sec-head-eyebrow">What to Expect</p>
       <h2>Grounded in real work, open to anyone online</h2>
       <div class="amber-rule"></div>
     </div>
-    <div class="stats-grid">
-      <div class="stat"><div class="num">180+</div><div class="lbl">Podcast episodes hosted</div></div>
-      <div class="stat"><div class="num">2</div><div class="lbl">Audiences: founders &amp; athletes</div></div>
-      <div class="stat"><div class="num">18+</div><div class="lbl">Adults only</div></div>
-      <div class="stat"><div class="num">Online</div><div class="lbl">Worldwide, over Zoom</div></div>
-    </div>
-    <div class="adv-grid">
+    <!-- Numeric highlight row (180+ / 2 Audiences / 18+ / Online) removed per feedback: audience, age and delivery details now live in the copy rather than as number brags. -->
+    <div class="adv-grid" style="margin-top:46px;border-top:none;padding-top:0;">
       <div class="adv">
         <span class="adv-no">01</span>
         <span class="adv-bar"></span>
@@ -608,7 +611,8 @@ details p{padding:0 26px 24px;color:#3f3f46;font-size:1.03rem;}
       </div>
     </div>
     <div style="margin-top:44px;">
-      <a href="#contact" class="btn btn-amber">Apply for 1:1 Coaching</a>
+      <!-- TODO: point to real /apply page when built -->
+      <a href="#apply" class="btn btn-amber">Apply for 1:1 Coaching</a>
     </div>
   </div>
 </section>
@@ -647,8 +651,9 @@ details p{padding:0 26px 24px;color:#3f3f46;font-size:1.03rem;}
 <!-- FINAL CTA -->
 <section class="sec-pad final" id="contact">
   <div class="wrap">
-    <h2>Ready to bring a situation?</h2>
-    <p>Apply for 1:1 coaching and book a no-obligation discovery call with Victor.</p>
+    <h2>Bring the situation you want to approach differently</h2>
+    <p>After applying, the next step is a discovery Zoom call with Victor, with no obligation to proceed with coaching.</p>
+    <!-- TODO: point to real /apply page when built -->
     <a href="#apply" class="btn btn-charcoal">Apply for 1:1 Coaching</a>
   </div>
 </section>
@@ -716,12 +721,13 @@ window.addEventListener('scroll',onScroll);onScroll();
 // hamburger
 var ham=document.getElementById('hamburger');
 ham.addEventListener('click',function(){
-  nav.classList.toggle('open');
+  var open=nav.classList.toggle('open');
   nav.classList.add('solid');
+  ham.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
 // close mobile menu on link click
 document.querySelectorAll('.nav-menu a, .nav-right a').forEach(function(a){
-  a.addEventListener('click',function(){nav.classList.remove('open');});
+  a.addEventListener('click',function(){nav.classList.remove('open');ham.setAttribute('aria-expanded','false');});
 });
 </script>
 </body>
